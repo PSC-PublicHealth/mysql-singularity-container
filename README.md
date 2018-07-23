@@ -51,3 +51,7 @@ Examples of these files can be found in the directory `example_config`
 	9. When finished, switch to the window running the `startscript.sh` command with `<ctrl>w` (select with arrow keys).  Stop the `startscript.sh` with `<ctrl>c`.
 
 	10. Run the command `singularity instance.stop mysql`
+
+## Notes
+
+It is possible to re-use the data directory. Simply tar the directory, copy to new location and untar.
