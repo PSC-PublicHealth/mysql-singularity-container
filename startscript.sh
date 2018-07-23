@@ -4,7 +4,7 @@
 module load singularity
 
 if [ ! -f mysql.simg ]; then
-    #singularity pull --name mysql.simg shub://ISU-HPC/mysql
+    singularity pull --name mysql.simg shub://ISU-HPC/mysql
     echo ''
 fi
 
@@ -40,7 +40,7 @@ echo "dbConnectString=DBI:mysql:database=<DBNAME>;mysql_socket=$SOCKETDIR_PATH/m
 echo
 
 
-#singularity instance.start --bind ${DATADIR_PATH}:/var/lib/mysql --bind ${SOCKETDIRPATH}:/run/mysqld ./mysql.simg mysql 
-#singularity run instance://mysql 
+singularity instance.start --bind ${DATADIR_PATH}:/var/lib/mysql --bind ${SOCKETDIRPATH}:/run/mysqld ./mysql.simg mysql 
+singularity run instance://mysql 
 
 
